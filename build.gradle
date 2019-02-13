@@ -4,19 +4,21 @@ version '1.0'
 apply plugin: 'groovy'
 apply plugin: 'com.kostasdrakonakis.espresso.results'
 
+sourceCompatibility = 1.8
+
 repositories {
     jcenter()
     mavenCentral()
+    kostas()
 }
-
-sourceCompatibility = 1.8
 
 espressoResults {
     greeter = "Kostas"
-    message = "This is my new plugin"
+    message = "This is my new plugin including Maven Repo"
 }
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile 'com.kostasdrakonakiso:compiler:1.0.0'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
